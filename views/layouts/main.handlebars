@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Live School</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/css/cover.css"/>
+  <link rel="stylesheet" href="/css/animate.min.css"/>
+ </head>
+
+ <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container-fluid">
+     <div class="navbar-header">
+       <button class="navbar-toggle shake animated" data-toggle="collapse" data-target="#navigBar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-education"></span>&nbsp;Live School</a>
+    </div><!--navbar-header ends-->
+
+    <div class="navbar-collapse collapse" id="navigBar">
+     <ul class="nav navbar-nav">
+       {{#if user}}
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Discussions</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span> Messager</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Contests&nbsp;<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">quiz</a></li>
+          </ul>
+       </li>
+       {{/if}}
+     </ul> <!--na{vbar-nav ends-->
+
+     <ul class="nav navbar-nav navbar-right"> <!-- rigth nav bar-->
+       {{#if user}}
+       <li><a href="/app/profile">  </a></li>
+       <li>
+         <a href="/users/logout">
+          <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout
+        </a>
+      </li>
+      {{/if}}
+     </ul><!--navbar-rigth ends -->
+
+
+   </div><!--ends navbar-collapse-->
+  </div><!--ends container-fluid-->
+ </nav><!--nav ends-->
+
+   {{{ body }}}
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+{{#if user}}
+<script src="/js/upload.js"></script>
+{{/if}}
+</body>
+</html>

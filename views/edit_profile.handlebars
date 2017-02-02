@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="page-header">
+    <h1 class="text-primary">Welcome to liveschool </h1>
+  </div>
+  <div id="upload_area" class="col-md-3">
+    <h4 class="text-info">Upload Your Profile Photo</h4>
+    <div class="alert alert-danger hidden" area-hidden="true" id="pic_error_msg"></div>
+    <img class="img-thumbnail" src="/images/shasin.jpg" id="pic_img" width="140px" heigth="140px" alt="Your Profile pic"/>
+    <span class="help-block">
+      Image size must be less than 1MB
+   </span>
+
+    <form class="form-inline" action="/edit-profile" method="post" role="form">
+      <div class="form-group">
+       <input type="file" id="pic-upload"/>
+     </div><br><br>
+       <button class="btn btn-primary btn-sm" type="submit" id="pic_upload_btn">Upload</button>
+    </form>
+  </div><!--end column 1-->
+   <footer>
+    This is a footer
+  </footer>
+</div><!--end container-->

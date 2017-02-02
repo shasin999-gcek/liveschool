@@ -1,0 +1,81 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="container">
+    <h1 style="font-family:Sans-Serif"><span class="glyphicon glyphicon-education"></span>&nbsp;Live School</h1>
+    <p>Social networking site for KTU Students</p>
+    <p>It will connect all students and faculty accross 154 colleges under KTU</p>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-8">
+    <div class="well" id="create-user-form">
+      {{#if errors}}
+    		{{#each errors}}
+    		   <div class="alert alert-danger">{{msg}}</div>
+    		{{/each}}
+    	{{/if}}
+
+      <div class="page-header">
+         <h1 class="text-primary">Create new Account</h1>
+       </div>
+    	<form class="form form-vertical" method="post" action="/users/register" role="form">
+    		<div class="form-group" id="input-first-name">
+    			<label for="input-first-name" class="sr-only">First Name :</label>
+    			<input class="form-control" type="text" name="firstname" placeholder="First Name"/>
+    		</div>
+    		<div class="form-group" id="input-last-name">
+    			<label for="input-last-name" class="sr-only">Last Name :</label>
+    			<input class="form-control" type="text" name="lastname" required placeholder="last name"/>
+    		</div>
+    		<div class="form-group" id="input-dob">
+    			<label for="input-dob" class="sr-only">Date of birth :</label>
+    			<input class="form-control" type="date" name="dob" required placeholder="Date Of Birth"/>
+    		</div>
+    		<div class="form-group" id="input-email">
+    			<label for="input-email" class="sr-only">Email :</label>
+    			<input class="form-control" type="email" name="email" required placeholder="Email"/>
+    		</div>
+    		<div class="form-group" id="input-password1">
+    			<label for="input-password" class="sr-only">Password :</label>
+    			<input class="form-control" type="password" name="password1" required placeholder="Password"/>
+    		</div>
+    		<div class="form-group" id="input-password2">
+    			<label for="input-password2" class="sr-only">Confirm Password :</label>
+    			<input class="form-control" type="password" name="password2" required placeholder="Confirm Password"/>
+    		</div>
+    		<button class="btn btn-primary" type="submit" id="create-btn">Create Account</button>
+    	</form>
+    </div><!--end well-->
+  </div><!--end coloumn1-->
+
+  <div class="col-md-4">
+     <div class="well" id="signup-form">
+       {{#if success_msg}}
+           <div class="alert alert-success">{{success_msg}}</div>
+       {{/if}}
+       {{#if error_msg}}
+           <div class="alert alert-danger">{{error_msg}}</div>
+       {{/if}}
+       {{#if error}}
+           <div class="alert alert-danger">{{error}}</div>
+       {{/if}}
+       <form class="form-signin" method="post" action="/users/login" role="form">
+         <h2 class="form-signin-heading text-primary">Login</h2>
+         <label for="inputEmail" class="sr-only">Email address</label>
+         <input type="email" class="form-control" name="username" placeholder="Email address" required="" autofocus="">
+         <label for="inputPassword" class="sr-only">Password</label>
+         <input type="password" class="form-control" name="password" placeholder="Password" required="">
+         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+       </form>
+     </div><!--end well-->
+  </div><!--end coloumn2-->
+</div><!--end row-->
+
+<hr>
+ <footer style="background-color:#eee;">
+   <p class="pull-right"><a href="#">Back to top</a></p>
+   <p style="font-size:14px;">© 2017 Live School, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+ </footer>
+</div>

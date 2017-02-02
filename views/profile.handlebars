@@ -1,0 +1,68 @@
+
+    <div class="cover-pic" style="background-image:url('/images/common_cover_pic.jpg');">
+        <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 col-sm-offset-4 placeholder">
+              <img src="/images/common_profile_pic.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>{{ user.first_name}} {{ user.last_name}}</h4>
+              <span class="text-mutued">{{ user.college_name}}</span>
+            </div>
+        </div>
+    </div>
+
+     <div class="blog-masthead">
+         <div class="container">
+           <nav class="blog-nav">
+             {{#if editAccess}}
+             {{else}}
+             <a class="blog-nav-item active" href="#">About</a>
+             {{/if}}
+             {{#if editAccess}}
+             <a class="blog-nav-item active" href="#">Posts</a>
+             {{else}}
+             <a class="blog-nav-item" href="#">Posts</a>
+             {{/if}}
+             <a class="blog-nav-item" href="#">Friends</a>
+             <a class="blog-nav-item" href="#">Followers</a>
+             <a class="blog-nav-item" href="#">Following</a>
+             <a class="blog-nav-item" href="#">Photos</a>
+           </nav>
+         </div>
+    </div>
+
+  <div class="container">
+
+<!--*****************************************************************************************************-->
+ <div id="main">
+    <ol class="breadcrumb">
+      <li><a href="#">Posts</a></li>
+       <li><a href="#">2017</a></li>
+      <li class="active">January</li>
+  </ol>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4>Muhammed Shasin <span class="text-muted">posted on </h4></h4>
+          <p>this is awsome</p>
+        </div>
+        <img src="../static/images/madi.png" alt="...">
+      </div>
+    </div><!--col 1 ends here-->
+</div>
+<!--***********************************************************************************-->
+    <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+         <li class="active">
+         <a href="#"><span class="badge pull-right">42</span>Home</a>
+         </li>
+         <li><a href="#">Profile</a></li>
+         <li>
+          <a href="#"><span class="badge pull-right">3</span>Messages</a>
+         </li>
+      </ul>
+  </div>
+</div><!--row ends here-->
+</div><!--container ends here-->

@@ -1,0 +1,65 @@
+
+<!--sidebar on left-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="##">POSTS<span class="sr-only">(current)</span></a></li>
+            <li><a href="/app/profile">profile</a></li>
+          </ul>
+        </div><!--first column ends here(left side bar)-->
+<!--************************************************************************************-->
+
+<!--*************************Post section***************************-->
+        <div class="col-md-8 col-md-offset-2 main">
+           <div class="panel panel-primary">
+             <div class="panel-heading">
+               <h3 class="panel-title">Upload your Status</h3>
+             </div>
+             <div class="panel-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="/images/shasin.jpg" width="60px" height="60px" />
+                </div>
+                <div class="col-md-11">
+                <div form-group>
+                  <textarea class="form-control" cols="4" rows="3" placeholder="Whats on your mind?"></textarea>
+                </div><hr>
+                <button type="button" class="btn btn-primary">Post</button>
+              </div>
+             </div>
+           </div>
+           </div><!--panel end-->
+
+<!--******************************tReact js starts here ************************************-->
+          <div class="thumbnail" style="background-color:#eee;">
+            <div class="caption">
+              <h5> <a href="#">{{ user.first_name }} {{ user.last_name }}</a></h5>
+              <p> This is my first post </p>
+            </div>
+            <img src="/images/beach.jpg" alt="...">
+          </div>
+        <div class="thumbnail hidden">
+          <div class="caption">
+            <h4>Thumbnail label</h4>
+            <p>A nice view of a big shining tower in dubai.</p>
+          </div>
+        <video controls="" autoplay="" name="media" style="width:100%;">
+          <source src="#" type="video/mp4">
+        </video>
+        </div>
+      </div><!--second column ends here-->
+<!--**************************************React js ends here**********************x***************-->
+<!--main end-->
+
+<!--rigth side bar(online)-->
+        <div class="col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-10 sidebar">
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="##">Online <span class="sr-only">(current)</span></a></li>
+
+
+            </ul>
+          </div>
+
+      </div><!--row ends here-->
+    </div><!--container ends-->

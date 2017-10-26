@@ -1,2 +1,2 @@
 # liveschool
-Social networking site for university students by NodeJS and react
+Social networking site for university students by NodeJS and react.js

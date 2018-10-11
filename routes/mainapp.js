@@ -53,7 +53,7 @@ io.on('connection', function(socket){
      socket.broadcast.emit('chat message', msg);
   });
 
-  socket.on('add user online', function (userData) {
+  socket.on('Add user online', function (userData) {
     console.log("adding new user online");
   });
 });
